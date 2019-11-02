@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  body: MyString
+  click_back_count: 1
+  unsubscribe_count: 1
+  new_user_count: 1
+  purchased_count: 1
+
+two:
+  body: MyString
+  click_back_count: 1
+  unsubscribe_count: 1
+  new_user_count: 1
+  purchased_count: 1

@@ -1,0 +1,134 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap";
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    min-height: 100%;
+}
+
+.sign-up-button{
+  height: 50px;
+  // width:30%;
+}
+
+.field{
+  // width:30%;
+}
+.body{
+  padding-top:80px;
+}
+
+body{
+  font-family: 'Source Code Pro', monospace;
+  background-color: rgba(0,0,0,0.87);
+  color: #47CE9A;
+  width: inherit;
+  min-height: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+
+.btn-primary{
+  // background-color: #47CE9A;
+  // background-color: #8F7946;
+  background-color: #BC5ED7;
+
+  border-radius:4px;
+  color: white;
+  border: none;
+  margin-left: 18px
+}
+
+.title{
+  margin-top: 89px;
+  margin-bottom: 89px;
+  border-bottom: 2px solid #40C1DB;
+  h1{
+    font-size: 80px;
+  }
+  h5{
+    color: #BC5ED7;
+  }
+}
+
+.jumbotron{
+  background-color: rgba(0,0,0,0.4)
+}
+
+
+input{
+  border: 2px solid #40C1DB;
+  border-radius: 4px;
+  color:white;
+  color:#43E6D5;
+  background-color: rgba(0,0,0,0.5);
+  width: 100%;
+  padding-left: 17px;
+  height: calc(0.3rem * 6);
+  // margin-bottom: 20px;
+  // padding-left: 30px
+}
+.input{
+  border: 2px solid #40C1DB;
+  border-radius: 4px;
+  color:white;
+  color:#43E6D5;
+  background-color: rgba(0,0,0,0.5);
+  width: 100%;
+  padding-left: 17px;
+
+  // margin-bottom: 20px;
+  // padding-left: 30px
+}
+.react-phone-number-input__row {
+    display: flex;
+    align-items: center;
+    // margin-bottom: 20px;
+  .react-phone-number-input__input {
+    height: calc(0.3rem * 6);
+    outline: none;
+    border-radius: 0;
+    padding: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    // border-bottom: 1px solid #C5D2E0;
+    transition: border 0.1s;
+    font-size: inherit;
+  }
+
+}
+// input[type=text]:focus {
+//   border: 3px solid white;
+// }
+
+// hr{
+//   background-color: #40C1DB;
+// }
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #47CE9A;
+  opacity: .58; /* Firefox */
+  // padding-left: 8px;
+}

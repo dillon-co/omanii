@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FriendTexter</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': true %>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i|Press+Start+2P|Source+Code+Pro" rel="stylesheet">
+  </head>
+
+  <body>
+    <%= render 'layouts/nav' %>
+    <div class="body">
+      <div class="container">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>
