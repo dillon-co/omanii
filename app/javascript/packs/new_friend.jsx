@@ -162,6 +162,7 @@ class FriendForm extends React.Component{
     const nameInput = (
       <div className='col-sm-4 home-input'>
         <input className='' type='text' ref='name' placeholder='Friends First Name'></input>
+        <br/>
       </div>
     );
 
