@@ -109,7 +109,7 @@ class FriendForm extends React.Component{
     //   redirectLink = '/users/sign_up'
     // }
     return(
-      <div>
+      <div className='row'>
         <div className='col-md-6'>
           <button className='btn btn-outline-warning' onClick={()=>{this.saveNewFriends()}} href='/profile'>
             Save
