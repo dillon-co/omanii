@@ -29,15 +29,15 @@ class Friend < ApplicationRecord
       number: "+1"
     },{
       first_name: "Elias",
-      last_name: "Jessop"
+      last_name: "Jessop",
       number: "+1"
     },  {
       first_name: "Wyatt",
-      last_name: "Cooper"
+      last_name: "Cooper",
       number: "+1"
     },{
       first_name: "Aidan",
-      last_name: "Brown"
+      last_name: "Brown",
       number: "+1"
     },{
       first_name: "Jake",
