@@ -147,7 +147,7 @@ class FriendForm extends React.Component{
     ));
 
     const phoneInput = (
-      <div className='col-lg-4'>
+      <div className='col-sm-4'>
         {/* <input className='' type='tel' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required ref='phone' placeholder='Phone Number'></input> */}
         <PhoneInput
           placeholder="Enter phone number"
@@ -160,7 +160,7 @@ class FriendForm extends React.Component{
     );
 
     const nameInput = (
-      <div className='col-lg-4 home-input'>
+      <div className='col-sm-4 home-input'>
         <input className='' type='text' ref='name' placeholder='Friends First Name'></input>
       </div>
       <br>
