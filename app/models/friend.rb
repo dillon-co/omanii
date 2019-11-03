@@ -12,7 +12,7 @@ class Friend < ApplicationRecord
       message_created = client.messages.create(
         '+14352529826',
         [self.number],
-        "Hey #{self.first_name.titleize},\n #{message.body} \n\n-#{self.users.email}\n\n\nSpread the love.\nwww.omanii.com"
+        "Hey #{self.first_name.titleize},\n #{message.body} \n\n-#{self.users.last.email}\n\n\nSpread the love.\nwww.omanii.com"
       )
     end
   end
