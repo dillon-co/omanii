@@ -21,18 +21,23 @@ class Friend < ApplicationRecord
     friend_list = [
       {
       first_name: "christian",
+      last_name: "Russell",
       number: "+1"
     },{
       first_name: "Rocco",
+      last_name: "Nichols",
       number: "+1"
     },{
       first_name: "Elias",
+      last_name: "Jessop"
       number: "+1"
     },  {
       first_name: "Wyatt",
+      last_name: "Cooper"
       number: "+1"
     },{
       first_name: "Aidan",
+      last_name: "Brown"
       number: "+1"
     },{
       first_name: "Jake",
