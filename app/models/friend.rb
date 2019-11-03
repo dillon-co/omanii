@@ -8,12 +8,16 @@ class Friend < ApplicationRecord
     message = Message.all.sample
     users_list = "#{self.users.all.map(&:first_name).first(3).join(",")} and #{self.users.all.count - 3} more"
     unless body
-      client = RestClient.new(ENV['PLIVO_AUTH_ID'], ENV['PLIVO_AUTH_TOKEN'])
-      message_created = client.messages.create(
-        '+14352529826',
-        [self.number],
-        "Hey #{self.first_name.titleize},\n #{message.body} \n\n-#{self.users.last.first_name}\n\n\nSpread the love.\nomanii.com\n"
-      )
+      begin
+        client = RestClient.new(ENV['PLIVO_AUTH_ID'], ENV['PLIVO_AUTH_TOKEN'])
+        message_created = client.messages.create(
+          '+14352529826',
+          [self.number],
+          "Hey #{self.first_name.titleize},\n #{message.body} \n\n-#{self.users.last.first_name}\n\n\nSpread the love.\nomanii.com\n"
+        )
+      rescue
+        puts "\n\n\nBroken Number! #{self.number}\n\n\n"
+      end
     end
   end
 
