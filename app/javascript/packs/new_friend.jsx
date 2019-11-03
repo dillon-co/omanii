@@ -163,6 +163,7 @@ class FriendForm extends React.Component{
       <div className='col-lg-4 home-input'>
         <input className='' type='text' ref='name' placeholder='Friends First Name'></input>
       </div>
+      <br>
     );
 
 
