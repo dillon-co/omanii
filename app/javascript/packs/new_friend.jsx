@@ -12,7 +12,7 @@ class FriendForm extends React.Component{
     super(props);
     this.state = {
       userLoggedIn: false,
-      newFriends: [{first_name:'Dillon',number:'+18018242592'}, {first_name:'jane',number:'123456678'}],
+      newFriends: [],
       // newFriends: [],
       // newFriends: [{first_name:'jane',number:'123456678'}],
     };
