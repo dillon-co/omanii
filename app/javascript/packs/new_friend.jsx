@@ -156,14 +156,13 @@ class FriendForm extends React.Component{
           className='input home-input'
           value={ this.state.value }
           onChange={ value => this.setState({ value }) } />
-          <br/>
       </div>
     );
 
     const nameInput = (
       <div className='col-sm-4 home-input'>
         <input className='' type='text' ref='name' placeholder='Friends First Name'></input>
-        <br/>
+
       </div>
     );
 
