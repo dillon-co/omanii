@@ -10,7 +10,7 @@ class Friend < ApplicationRecord
     unless body
       client = RestClient.new(ENV['PLIVO_AUTH_ID'], ENV['PLIVO_AUTH_TOKEN'])
       message_created = client.messages.create(
-        '+15128557298',
+        '+14352529826',
         [self.number],
         "Hey #{self.first_name.titleize},\n #{message.body} \n\n-#{self.users.email}\n\n\nSpread the love.\nwww.omanii.com"
       )
