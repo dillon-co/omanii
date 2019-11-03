@@ -110,12 +110,12 @@ class FriendForm extends React.Component{
     // }
     return(
       <div className='row'>
-        <div className='col-md-6'>
+        <div className='col-6'>
           <button className='btn btn-outline-warning' onClick={()=>{this.saveNewFriends()}} href='/profile'>
             Save
           </button>
         </div>
-        <div className='col-md-6 title'>
+        <div className='col-6 title'>
            <h5>(Add a few) </h5>
         </div>
       </div>
