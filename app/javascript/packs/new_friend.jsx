@@ -153,14 +153,14 @@ class FriendForm extends React.Component{
           placeholder="Enter phone number"
           country="US"
           ref='phone'
-          className='input'
+          className='input home-input'
           value={ this.state.value }
           onChange={ value => this.setState({ value }) } />
       </div>
     );
 
     const nameInput = (
-      <div className='col-lg-4'>
+      <div className='col-lg-4 home-input'>
         <input className='' type='text' ref='name' placeholder='Friends First Name'></input>
       </div>
     );
