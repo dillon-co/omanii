@@ -156,6 +156,7 @@ class FriendForm extends React.Component{
           className='input home-input'
           value={ this.state.value }
           onChange={ value => this.setState({ value }) } />
+          <br/>
       </div>
     );
 
