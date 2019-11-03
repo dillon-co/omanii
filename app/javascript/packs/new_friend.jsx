@@ -176,7 +176,7 @@ class FriendForm extends React.Component{
         <div >
           <div className='formGroup'>
             <form onSubmit={this.handleSubmit}>
-            <div className='row'>
+            <div className='row inputs'>
               {nameInput}
               {phoneInput}
               <button type="submit" className="btn btn-primary" id='addFriend'>Add friend</button>
