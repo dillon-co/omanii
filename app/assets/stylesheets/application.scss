@@ -28,7 +28,9 @@ html {
   height: 50px;
   // width:30%;
 }
-
+a{
+  color: #BC5ED7;
+}  
 // .home-input{
 //   height: 80px;
 //   padding-bottom: 30px;
@@ -98,31 +100,31 @@ input{
   // margin-bottom: 20px;
   // padding-left: 30px
 }
-.input{
-  border: 2px solid #40C1DB;
-  border-radius: 4px;
-  color:white;
-  color:#43E6D5;
-  background-color: rgba(0,0,0,0.5);
-  width: 100%;
-  // padding-left: 17px;
-
-  // margin-bottom: 20px;
-  // padding-left: 30px
-}
+// .input{
+//   color:white;
+//   color:#43E6D5;
+//   background-color: rgba(0,0,0,0.5);
+//   width: 100%;
+//   // padding-left: 17px;
+//
+//   // margin-bottom: 20px;
+//   // padding-left: 30px
+// }
 .react-phone-number-input__row {
     display: flex;
     align-items: center;
     // margin-bottom: 20px;
   .react-phone-number-input__input {
-    height: calc(0.3rem * 6);
-    outline: none;
-    border-radius: 0;
+    border: 2px solid #40C1DB;
+    border-radius: 4px;
+    // height: calc(0.3rem * 6);
+    // outline: none;
+    // border-radius: 0;
     padding: 0;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    border: none;
+    // border: none;
     // border-bottom: 1px solid #C5D2E0;
     transition: border 0.1s;
     font-size: inherit;
