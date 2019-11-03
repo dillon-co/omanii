@@ -112,7 +112,7 @@ class FriendForm extends React.Component{
       <div>
         <button className='btn btn-outline-warning' onClick={()=>{this.saveNewFriends()}} href='/profile'>
           Save
-        </button>
+        </button> <h5>Add a few more </h5>
         {/* <a href={redirectLink} className='btn btn-outline-warning' >
         </a> */}
       </div>
