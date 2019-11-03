@@ -65,7 +65,7 @@ body{
 
 .title{
   margin-top: 20px;
-  margin-bottom: 10px;
+  // margin-bottom: 10px;
   border-bottom: 2px solid #40C1DB;
   h1{
     font-size: 50px;
@@ -81,13 +81,14 @@ body{
 
 
 input{
+  margin-bottom: 5px;
   border: 2px solid #40C1DB;
   border-radius: 4px;
   color:white;
   color:#43E6D5;
   background-color: rgba(0,0,0,0.5);
   width: 100%;
-  padding-left: 17px;
+  // padding-left: 17px;
   height: calc(0.3rem * 6);
   // margin-bottom: 20px;
   // padding-left: 30px
@@ -99,7 +100,7 @@ input{
   color:#43E6D5;
   background-color: rgba(0,0,0,0.5);
   width: 100%;
-  padding-left: 17px;
+  // padding-left: 17px;
 
   // margin-bottom: 20px;
   // padding-left: 30px
