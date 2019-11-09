@@ -13,13 +13,17 @@ class Friend < ApplicationRecord
         message_created = client.messages.create(
           '+14352529826',
           [self.number],
-          "Hey #{self.first_name.titleize},\n #{message.body} \n\n-#{self.users.last.first_name}\n\n\nSpread the love.\nomanii.com\n"
+          "Hey #{self.first_name.titleize},\n #{message.body} \n\n-#{self.users.last.first_name}\n\n\nauto message from \nomanii.com\n(it's rude to not add your friends)"
         )
       rescue
         puts "\n\n\nBroken Number! #{self.number}\n\n\n"
+
       end
+
     end
   end
+
+
 
   def self.create_masters_friends(friend_list)
     User.find_by(email: 'dilloncortez@gmail.com').friends.create(friend_list)
