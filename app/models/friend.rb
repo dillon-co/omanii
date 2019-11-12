@@ -13,7 +13,7 @@ class Friend < ApplicationRecord
         message_created = client.messages.create(
           '+14352529826',
           [self.number],
-          "Hey #{self.first_name.titleize},\n #{message.body} \n\n-#{self.users.last.first_name} self.users.last_name\n\n\nauto message from \nomanii.com\nAdd your friends because they'll appreciate it."
+          "Hey #{self.first_name.titleize},\n #{message.body} \n\n-#{self.users.last.first_name} #{self.users.last_name}\n\n\nauto message from \nomanii.com\nAdd your friends because they'll appreciate it."
         )
       rescue
         puts "\n\n\nBroken Number! #{self.number}\n\n\n"
