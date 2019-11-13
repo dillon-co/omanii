@@ -18,7 +18,6 @@ class Friend < ApplicationRecord
           )
         rescue
           puts "\n\n\nBroken Number! #{self.number}\n\n\n"
-
         end
       end
     end

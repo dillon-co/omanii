@@ -1,0 +1,11 @@
+<div class="container">
+
+  <h1>These are the messages that are being used</h2>
+    <hr>
+  <div class="row">
+    <% @messages.each do |message| %>
+    <div class='col-md-4 card'> <%= message.body %> </div>
+
+    <% end %>
+  </div>
+</div>

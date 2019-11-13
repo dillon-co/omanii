@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  get 'messages' => 'messages#index', as: :messages
   get 'pages/index'
   get 'pages/home'
-  get '/about' => 'pages#about', as: :about 
+  get '/about' => 'pages#about', as: :about
   get '/profile' => "pages#profile", as: :profile
   devise_for :users, controllers: { sessions: 'users/sessions', registrations: 'users/registrations'}
 

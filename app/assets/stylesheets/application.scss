@@ -24,13 +24,18 @@ html {
     min-height: 100%;
 }
 
+.card{
+  background-color: rgba(0,0,0,0.2);
+  border: 3px solid #47CE9A
+}
+
 .sign-up-button{
   height: 50px;
   // width:30%;
 }
 a{
   color: #BC5ED7;
-}  
+}
 // .home-input{
 //   height: 80px;
 //   padding-bottom: 30px;
