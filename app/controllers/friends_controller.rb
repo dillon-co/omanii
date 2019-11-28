@@ -19,11 +19,17 @@ class FriendsController < ApplicationController
     end
   end
 
+  def best_friends
+    
+  end
+
   def index
     if user_signed_in?
-      users_friends = current_user.friends.all
-      puts "\n\n\n\n\n\n\n\n\n#{users_friends.as_json}\n\n\n\n\n\n\n\n"
-      render json: users_friends
+      @users_friends = current_user.friends.all
+      # @best_friends = Friend.find_by(number: current_user.number).users
+      puts "\n\n\n\n\n\n\n\n\n#{@users_friends.as_json}\n\n\n\n\n\n\n\n"
+      # render json: {added_freinds: @users_friends, added_by: @best_friends}
+      render json: @users_friends
     end
   end
 end

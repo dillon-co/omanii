@@ -7,4 +7,13 @@ class User < ApplicationRecord
   has_many :friends, through: :friendships
 
 
+  def reformatted_number
+    if self.number.first(2) != "+1"
+      "+1#{self.number}"
+    else
+      self.number
+    end
+  end
+
+
 end

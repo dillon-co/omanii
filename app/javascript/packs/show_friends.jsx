@@ -5,8 +5,11 @@ import PropTypes from 'prop-types'
 class AllFriends extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {friends: []}
-
+    this.state = {
+      friends: [],
+      bestFriends: []
+    }
+    this.getBestFriends = this.getBestFriends.bind(this);
     this.getAllFriends  = this.getAllFriends.bind(this);
   }
 
@@ -15,6 +18,17 @@ class AllFriends extends React.Component {
 
   }
 
+  getBestFriends(){
+    const url = '/friends/best_friends'
+    etch(url)
+     .then(response => {
+       if (response.ok) {
+          return response.json();
+       }
+       throw new Error("Network response was not ok.");
+     })
+     .then(response => this.setState({bestFriends: response}));
+  }
 
   getAllFriends(){
     const url = '/friends/index'

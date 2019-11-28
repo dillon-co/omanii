@@ -6,6 +6,9 @@
          <li class='nav-item active'>
            <%= link_to "About", about_path, class:"nav-link active" %>
          </li>
+         <li>
+           <%= javascript_pack_tag "friend_modal", "data-turbolinks-track": true, method: 'get' %>
+         </li>
        </ul>
    </div>
 
@@ -23,12 +26,12 @@
                 <li class="nav-item">
                   <%= link_to "Sign Out", destroy_user_session_path,  method:'delete', class:"nav-link" %>
                 </li>
-              </li class='nav-itme'>
-                  <%= link_to "My Friends", profile_path, class:'nav-link active' %>
-                </li>
                 <% else %>
                   <%= link_to "Sign In", new_user_session_path, class:"nav-link active" %>
                 <% end %>
+                </li class='nav-itme'>
+                  <%= link_to "My Friends", profile_path, class:'nav-link active' %>
+                </li>
             </li>
         </ul>
 

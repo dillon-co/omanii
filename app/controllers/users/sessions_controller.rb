@@ -14,6 +14,7 @@ class Users::SessionsController < Devise::SessionsController
     if resource.save
       update_user_with_friends
     end
+    # redirect_to profile_path
     # raise "hell"
   end
 
@@ -29,8 +30,12 @@ class Users::SessionsController < Devise::SessionsController
   #   devise_parameter_sanitizer.permit(:sign_in, keys: [:attribute])
   # end
 
+  def after_sign_in_path_for(resource)
+    '/profile'
+  end
+  
   def update_user_with_friends
-    unless cookies[:friend_ids] == ""
+    if cookies[:friend_ids]
       new_friend_hashes = cookies[:friend_ids].split("&").map{|f| {friend_id: f.to_i}}
       new_friend_hashes.each {|nfh|resource.friendships.find_or_create_by(nfh)}
       cookies[:friend_ids] = ""
