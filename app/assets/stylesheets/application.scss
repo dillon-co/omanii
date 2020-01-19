@@ -15,9 +15,6 @@
  */
 @import "bootstrap";
 
-* {
-    box-sizing: border-box;
-}
 
 html {
     width: 100%;
@@ -25,33 +22,21 @@ html {
 }
 
 .card{
-  background-color: rgba(0,0,0,0.2);
-  border: 3px solid #47CE9A
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 20px;
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
 }
 
 .sign-up-button{
   height: 50px;
-  // width:30%;
-}
-a{
-  color: #BC5ED7;
-}
-// .home-input{
-//   height: 80px;
-//   padding-bottom: 30px;
-// }
-
-.field{
-  // width:30%;
-}
-.body{
-  // padding-top:80px;
 }
 
 body{
-  font-family: 'Source Code Pro', monospace;
-  background-color: rgba(0,0,0,0.87);
-  color: #47CE9A;
+  // font-family: 'Source Code Pro', monospace;
+  font-family: 'Varela Round', sans-serif;
+  // background-color: rgba(0,0,0,0.87);
+  color: #035F99;
   width: inherit;
   min-height: inherit;
   margin: 0;
@@ -60,10 +45,7 @@ body{
 
 
 .btn-primary{
-  // background-color: #47CE9A;
-  // background-color: #8F7946;
-  background-color: #BC5ED7;
-
+  background-color: #A82929;
   border-radius:4px;
   color: white;
   border: none;
@@ -72,13 +54,12 @@ body{
 
 .title{
   margin-top: 20px;
-  // margin-bottom: 10px;
   border-bottom: 2px solid #40C1DB;
   h1{
     font-size: 40px;
   }
   h5{
-    color: #BC5ED7;
+    color: #09334D;
   }
 }
 
@@ -95,58 +76,38 @@ input{
   margin-top: 15px;
   border: 2px solid #40C1DB;
   border-radius: 4px;
-  color:white;
-  color:#43E6D5;
-  background-color: rgba(0,0,0,0.5);
+  color: #036C99;
   width: 100%;
-  // font-size: 20px;
-  // padding-left: 17px;
-  // height: calc(0.3rem * 6);
-  // margin-bottom: 20px;
-  // padding-left: 30px
+
 }
-// .input{
-//   color:white;
-//   color:#43E6D5;
-//   background-color: rgba(0,0,0,0.5);
-//   width: 100%;
-//   // padding-left: 17px;
-//
-//   // margin-bottom: 20px;
-//   // padding-left: 30px
-// }
+
 .react-phone-number-input__row {
     display: flex;
     align-items: center;
-    // margin-bottom: 20px;
   .react-phone-number-input__input {
     border: 2px solid #40C1DB;
     border-radius: 4px;
-    // height: calc(0.3rem * 6);
-    // outline: none;
-    // border-radius: 0;
     padding: 0;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    // border: none;
-    // border-bottom: 1px solid #C5D2E0;
     transition: border 0.1s;
     font-size: inherit;
   }
 
 }
-// input[type=text]:focus {
-//   border: 3px solid white;
-// }
 
-// hr{
-//   background-color: #40C1DB;
-// }
+.navbar {
+  background-color: #035F99;
+  a{
+    color: white;
+  }
+}
+
 
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #47CE9A;
+  color:#036C99;
   opacity: .58; /* Firefox */
   // padding-left: 8px;
 }

@@ -1,27 +1,30 @@
 <div class="row">
-  <div class="col-md-6 card title">
+  <div class="col-md-5 card">
     <h1>Added You</h1>
-    <hr>
+
     <% if current_user.number.present? %>
+
+    <%= link_to "Return The Favor", root_path, class: 'btn btn-outline-danger'  %>
+    <hr>
       <% if @best_friends.count > 0 %>
         <% @best_friends.each do |bf| %>
           <h5><%= "#{bf.first_name} #{bf.last_name}" %></h5>
         <% end %>
       <% else %>
+      <hr>
         <h5>Looks like no one has added you yet.</h5>
-        <!-- <%= link_to "", root_path, class: 'btn btn-outline-primary'  %> -->
+        <!-- <%= link_to "Get Started", root_path, class: 'btn btn-outline-primary'  %> -->
       <% end %>
     <% else %>
       <h5>See who added you. </h5>
       <%= link_to "Add your number", edit_user_registration_path, class: 'btn btn-outline-primary'  %>
     <% end %>
-
-    <%#= javascript_pack_tag "show_friends", 'data-turbolinks-track': true, method: 'get' %>
   </div>
-  <div class="col-md-6 card title">
+  <div class="col-md-5 card">
     <h1>People You Added</h1>
     <% if @friends.count > 0 %>
       <%= link_to "Add More", root_path, class: 'btn btn-outline-danger'  %>
+        <hr>
         <% @friends.each do |bf| %>
         <h5><%= "#{bf.first_name} #{bf.last_name}" %>: <%= "(#{bf.number[2..4]})#{bf.number[5..7]}-#{bf.number[8..-1]}" %></h5>
       <% end %>
