@@ -51,11 +51,9 @@ class Friend < ApplicationRecord
 
   def self.check_user_list_method_on_prod
     self.all.map do |f|
-      {f.id: f.user_list}
+      {"#{f.id}": f.user_list}
     end
   end
-
-  private
 
   def user_list
     users_count = users.count
@@ -69,4 +67,8 @@ class Friend < ApplicationRecord
     end
     who_from
   end
+
+  private
+
+
 end
