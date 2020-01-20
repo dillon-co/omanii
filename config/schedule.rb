@@ -20,5 +20,5 @@
 # Learn more: http://github.com/javan/whenever
 
 every 10.days do
-  runner "Friend.send_buld_message"
+  runner "Friend.send_bulk_message"
 end
