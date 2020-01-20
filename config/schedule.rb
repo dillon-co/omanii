@@ -19,6 +19,6 @@
 
 # Learn more: http://github.com/javan/whenever
 
-every 10.days do
+every 10.days, at: '8:30 am' do
   runner "Friend.send_bulk_message"
 end
