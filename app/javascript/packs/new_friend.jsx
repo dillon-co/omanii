@@ -12,9 +12,8 @@ class FriendForm extends React.Component{
     super(props);
     this.state = {
       userLoggedIn: false,
-      newFriends: [],
       // newFriends: [],
-      // newFriends: [{first_name:'jane',number:'123456678'}],
+      newFriends: [{first_name:'jane',number:'123456678'}],
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -110,15 +109,22 @@ class FriendForm extends React.Component{
     // }
     return(
       <div className='row'>
-        <div className='col-6'>
-          <button className='btn btn-outline-warning' onClick={()=>{this.saveNewFriends()}} href='/profile'>
-            Save
-          </button>
+        <div className=''>
+          <div className='col-6'>
+          <br/>
+            <button className='btn btn-outline-warning' onClick={()=>{this.saveNewFriends()}} href='/profile'>
+              Save
+            </button>
+          </div>
+          <div className='container'>
+             <h5>(Add a few) </h5>
+
+          </div>
+          <hr/>
         </div>
-        <div className='col-6 title'>
-           <h5>(Add a few) </h5>
-        </div>
+
       </div>
+
     )
   }
 
@@ -145,7 +151,9 @@ class FriendForm extends React.Component{
 
     const allFriends = newFriends.map((friend, index) => (
       <div>
+        <br/>
         <h3>{friend.first_name}: {friend.number}</h3>
+        <br/>
       </div>
     ));
 
@@ -179,17 +187,20 @@ class FriendForm extends React.Component{
             <div className='row inputs'>
               {nameInput}
               {phoneInput}
-              <button type="submit" className="btn btn-primary new-friend-button" id='addFriend'>Add friend</button>
+              <div className='container'>
+                <button type="submit" className="btn btn-primary new-friend-button" id='addFriend'>Add friend</button>
+              </div>
             </div>
             </form>
           </div>
           <br/>
-          {addFriendsButton}
-          <br/>
-          {allFriends}
+          <div className='card'>
+            <div className='container'>
+              {addFriendsButton}
+              {allFriends}
+            </div>
+          </div>
         </div>
-
-        {/* TODO Add a button to submit all friends as a users new friends  */}
       </div>
     </>
     )
