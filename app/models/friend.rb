@@ -18,9 +18,8 @@ class Friend < ApplicationRecord
       if self.subscribed
         message = Message.all.sample
         marketing_message = "Sorry for not hearing from us for a while. There were some bugs we had to fix. If you added friends to be texted, they probably didn't save. Log on to double check."
-        # users_list = "#{self.users.all.map(&:first_name).first(3).join(",")} and #{self.users.all.count - 3} more"
         unless body
-            message_body = "Hey #{self.first_name.titleize},\n #{message.body} \n\n this is an automated message from\nomanii.com\n\n you were added by #{users_list}\n\n#{marketing_message}"
+            message_body = "Hey #{self.first_name.titleize},\n #{message.body} \n\n this is an automated message from\nomanii.com\n\n you were added by #{user_list}\n\n#{marketing_message}"
             create_plivo_message(message_body)
         else
           message_body = "Hey #{self.first_name.titleize},\n\n#{body} \n\nautomated message from\nomanii.com\n\n Someone new added you. Click the link to see who."
@@ -51,6 +50,9 @@ class Friend < ApplicationRecord
   end
 
   def self.check_user_list_method_on_prod
+    self.all.map do |f|
+      {f.id: f.user_list}
+    end
   end
 
   private
