@@ -12,8 +12,8 @@ class FriendForm extends React.Component{
     super(props);
     this.state = {
       userLoggedIn: false,
-      // newFriends: [],
-      newFriends: [{first_name:'jane',number:'123456678'}],
+      newFriends: [],
+      // newFriends: [{first_name:'jane',number:'123456678'}],
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);

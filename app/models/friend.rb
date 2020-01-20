@@ -61,7 +61,7 @@ class Friend < ApplicationRecord
     if users_count > 2
       who_from = "#{users.last.first_name.titleize}, #{users.last(2).first.frst_name.titleize} and #{users_count - 2} more"
     elsif users_count == 2
-      who_from = "#{users.last.first_name.titleize} and #{users.last(2).first.first_name.titleize}"
+      who_from = "#{users.last.first_name.gsub.titleize} and #{users.last(2).first.first_name.titleize}"
     else
       who_from = users.last.first_name.titleize
     end
