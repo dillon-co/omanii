@@ -17,7 +17,7 @@ class Friend < ApplicationRecord
     begin
       if self.subscribed
         message = Message.all.sample
-        marketing_message = "Sorry for not hearing from us for a while. There were some bugs we had to fix. If you added friends to be texted, they probably didn't save. Log on to double check."
+        marketing_message = "Sorry for not hearing from us for a while, there were some bugs we had to fix. If you added people to be texted, they might not have saved. See omanii.com/profile to double check."
         unless body
             message_body = "Hey #{self.first_name.titleize},\n #{message.body} \n\n this is an automated message from\nomanii.com\n\n you were added by #{user_list}\n\n#{marketing_message}"
             create_plivo_message(message_body)
