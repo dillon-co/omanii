@@ -200,6 +200,7 @@ class FriendForm extends React.Component{
               {allFriends}
             </div>
           </div>
+          <br/><br/>
         </div>
       </div>
     </>
