@@ -13,7 +13,7 @@ class FriendForm extends React.Component{
     this.state = {
       userLoggedIn: false,
       newFriends: [],
-      // newFriends: [{first_name:'jane',number:'123456678'}],
+      // newFriends: [{first_name:'Jane',number:'123456678'},{first_name:'George',number:'123456678'}],
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -108,21 +108,19 @@ class FriendForm extends React.Component{
     //   redirectLink = '/users/sign_up'
     // }
     return(
-      <div className='row'>
-        <div className=''>
-          <div className='col-6'>
-          <br/>
-            <button className='btn btn-outline-warning' onClick={()=>{this.saveNewFriends()}} href='/profile'>
-              Save
+      <div className='all-new-friends-card'>
+        <div className='row'>
+          <div className='col-xs-4'>
+            <button className='btn btn-lg btn-danger' onClick={()=>{this.saveNewFriends()}} href='/profile'>
+              <strong>Save</strong>
             </button>
           </div>
-          <div className='container'>
-             <h5>(Add a few) </h5>
+          <div className='col-xs-6 message-text'>
+             <h5>Add up to 3</h5>
 
           </div>
-          <hr/>
         </div>
-
+        <hr/>
       </div>
 
     )
@@ -150,10 +148,10 @@ class FriendForm extends React.Component{
     // }
 
     const allFriends = newFriends.map((friend, index) => (
-      <div>
-        <br/>
+      <div className='individual-friend'>
+
         <h3>{friend.first_name}: {friend.number}</h3>
-        <br/>
+
       </div>
     ));
 
@@ -182,13 +180,13 @@ class FriendForm extends React.Component{
       <>
       <div className='container'>
         <div >
-          <div className='formGroup'>
+          <div className='formGroup add-friends-main'>
             <form onSubmit={this.handleSubmit}>
             <div className='row inputs'>
               {nameInput}
               {phoneInput}
               <div className='container'>
-                <button type="submit" className="btn btn-primary new-friend-button" id='addFriend'>Add friend</button>
+                <button type="submit" className="btn btn-primary new-friend-button" id='addFriend'>Add</button>
               </div>
             </div>
             </form>

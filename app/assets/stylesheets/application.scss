@@ -53,13 +53,21 @@ body{
 }
 
 .title{
-  margin-top: 20px;
+  @media only screen
+  and (min-device-width : 320px)
+  and (max-device-width : 480px) {
+    text-align: center    /* Styles */
+  }
+
+  margin-top: 64px;
   border-bottom: 2px solid #40C1DB;
   h1{
     font-size: 40px;
+
   }
   h5{
     color: #09334D;
+    margin-bottom: 40px;
   }
 }
 
@@ -103,11 +111,35 @@ input{
     color: white;
   }
 }
+.individual-friend{
+  margin-top: 20px;
+}
 
+.all-new-friends-card{
+  margin-top:15px;
+  margin-left:20px;
+  .message-text{
+    margin-left:20px;
+    margin-top:15px;
+  }
+}
 
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color:#036C99;
   opacity: .58; /* Firefox */
   // padding-left: 8px;
+}
+
+.add-friends-main{
+  .btn{
+    font-size: 80%;
+    border-radius: 5rem;
+    letter-spacing: .1rem;
+    font-weight: bold;
+    padding: 1rem;
+    opacity: 0.7;
+    transition: all 0.2s;
+    width: 80px;
+  }
 }

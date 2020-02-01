@@ -63,8 +63,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # The path used after sign up.
   def after_sign_up_path_for(resource)
     # new_friends = cookies[:friend_ids]
-
-    '/profile' # Or :prefix_to_your_route
+    # :price_path # Or :prefix_to_your_route
+    profile_path(resource)
   end
 
   # The path used after sign up for inactive accounts.

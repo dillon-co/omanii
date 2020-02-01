@@ -10,17 +10,14 @@ class FriendsController < ApplicationController
     end
     Friend.create(new_friends)
     all_added_friends_ids = Friend.where(number: friend_numbers).ids
-    # added_friend_ids_hash = all_added_friends_ids.map{|f| {friend_id: f}}
     if user_signed_in?
       all_added_friends_ids.each { |new_friend_id| current_user.friendships.find_or_create_by(friend_id: new_friend_id) }
     else
-      # friend_ids = friends.map(&:id)
       cookies[:friend_ids] = all_added_friends_ids
     end
   end
 
   def best_friends
-    
   end
 
   def index

@@ -9,6 +9,10 @@ class PagesController < ApplicationController
   def about
   end
 
+  def privacy_policy
+  end
+    
+
   def profile
     unless user_signed_in?
       # save_new_friends_to_db

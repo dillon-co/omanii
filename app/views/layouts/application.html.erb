@@ -21,7 +21,11 @@
   <body>
     <%= render 'layouts/nav' %>
     <div class="body">
-      <div class="container">
+      <% unless current_page?('/price') %>
+        <div class="container">
+      <% else %>
+        <div>
+      <% end %>
           <%= yield %>
       </div>
     </div>

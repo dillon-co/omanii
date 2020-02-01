@@ -17,12 +17,12 @@ class Friend < ApplicationRecord
     begin
       if self.subscribed
         message = Message.all.sample
-        marketing_message = "Sorry for not hearing from us for a while, there were some bugs we had to fix. If you added people to be texted, they might not have saved. See omanii.com/profile to double check."
+        marketing_message = "Spread the love"
         unless body
-            message_body = "Hey #{self.first_name.titleize},\n #{message.body} \n\n this is an automated message from\nomanii.com\n\n you were added by #{user_list}\n\n#{marketing_message}"
+            message_body = "Hey #{self.first_name.titleize},\n #{message.body} \n\n This is an automated message from omanii.com\n\n you were added by #{user_list}\n\n#{marketing_message}"
             create_plivo_message(message_body)
         else
-          message_body = "Hey #{self.first_name.titleize},\n\n#{body} \n\nautomated message from\nomanii.com\n\n Someone new added you. Click the link to see who."
+          message_body = "Hey #{self.first_name.titleize},\n\n#{body} \n\nautomated message from\nomanii.com\n\n#{marketing_message}"
           create_plivo_message(message_body)
         end
       end

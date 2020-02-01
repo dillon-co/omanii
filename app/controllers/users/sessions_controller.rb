@@ -31,9 +31,9 @@ class Users::SessionsController < Devise::SessionsController
   # end
 
   def after_sign_in_path_for(resource)
-    '/profile'
+    profile_path(resource)
   end
-  
+
   def update_user_with_friends
     if cookies[:friend_ids]
       new_friend_hashes = cookies[:friend_ids].split("&").map{|f| {friend_id: f.to_i}}

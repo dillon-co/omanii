@@ -21,8 +21,11 @@ gem 'jbuilder', '~> 2.7'
 gem 'plivo', '>= 4.3.0'
 
 gem 'devise'
+gem 'omniauth-facebook'
 
 gem 'bootstrap', '~> 4.3.1'
+
+gem 'stripe'
 
 gem 'jquery-rails'
 gem 'annotate'
