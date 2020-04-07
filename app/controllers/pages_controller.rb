@@ -22,7 +22,11 @@ class PagesController < ApplicationController
       @friends = current_user.friends.all
       if current_user.number.present?
         best_friends = Friend.find_by(number: current_user.reformatted_number)
-        @best_friends = best_friends.users
+        if best_friends.present?
+          @best_friends = best_friends.users
+        else
+          @best_friends = []  
+        end
       end
     end
   end

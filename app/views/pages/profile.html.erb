@@ -7,9 +7,10 @@
 
     <% if current_user.number.present? %>
 
+    <% if @best_friends.count > 0 %>
     <%= link_to "Return The Favor", root_path, class: 'btn btn-danger'  %>
+  
     <hr>
-      <% if @best_friends.count > 0 %>
         <% @best_friends.each do |bf| %>
           <h5><%= "#{bf.first_name} #{bf.last_name}" %></h5>
         <% end %>
