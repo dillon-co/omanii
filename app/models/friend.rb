@@ -14,7 +14,7 @@ class Friend < ApplicationRecord
   end
 
   def send_message(body: nil)
-    # begin
+    begin
       if self.subscribed
         message = Message.all.sample
         marketing_message = "Spread the love"
@@ -26,9 +26,9 @@ class Friend < ApplicationRecord
           create_plivo_message(message_body)
         end
       end
-    # rescue
-    #   puts "\n\n\nBroken Number! #{self.number}\n\n\n"
-    # end
+    rescue
+      puts "\n\n\nBroken Number! #{self.number}\n\n\n"
+    end
   end
 
   def create_plivo_message(message_body)
