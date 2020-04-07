@@ -11,7 +11,7 @@ class PagesController < ApplicationController
 
   def privacy_policy
   end
-    
+
 
   def profile
     unless user_signed_in?
@@ -21,7 +21,8 @@ class PagesController < ApplicationController
     else
       @friends = current_user.friends.all
       if current_user.number.present?
-        @best_friends = Friend.find_by(number: current_user.reformatted_number).users
+        best_friends = Friend.find_by(number: current_user.reformatted_number)
+        @best_friends = best_friends.users
       end
     end
   end
