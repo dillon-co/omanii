@@ -58,11 +58,11 @@ class Friend < ApplicationRecord
   def user_list
     users_count = users.count
     if users_count > 2
-      who_from = "#{users.last.first_name.titleize}, #{users.last(2).first.first_name.titleize} and #{users_count - 2} more"
+      who_from = "#{users.last.first_name.titleize} #{users.last.last_name.titleize}, #{users.last(2).first.first_name.titleize} #{users.last(2).first.last_name.titleize} and #{users_count - 2} more"
     elsif users_count == 2
-      who_from = "#{users.last.first_name.titleize} and #{users.last(2).first.first_name.titleize}"
+      who_from = "#{users.last.first_name.titleize} #{users.last.last_name.titleize} and #{users.last(2).first.first_name.titleize} #{users.last(2).first.last_name.titleize}"
     else
-      who_from = users.last.first_name.titleize
+      who_from = "#{users.last.first_name.titleize} #{users.last.last_name.titleize}"
     end
     who_from
   end
