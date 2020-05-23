@@ -34,7 +34,7 @@ class Friend < ApplicationRecord
   def create_plivo_message(message_body)
     client = RestClient.new(ENV['PLIVO_AUTH_ID'], ENV['PLIVO_AUTH_TOKEN'])
     message_created = client.messages.create(
-      '+14352529826',
+      '+14352520588',
       [self.number],
       message_body
     )
