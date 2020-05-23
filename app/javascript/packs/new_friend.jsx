@@ -116,7 +116,7 @@ class FriendForm extends React.Component{
             </button>
           </div>
           <div className='col-xs-6 message-text'>
-             <h5>Add as many as you want </h5>
+             <h5>Add as many as you want before clicking save </h5>
 
           </div>
         </div>
